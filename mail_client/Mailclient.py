@@ -17,11 +17,11 @@ with open('password.txt', 'r') as f:
 
 	password = f.read()
 	
-server.login('sreeragpb0@gmail.com', 'password')
+server.login('youremail@mail.com', 'password')
 
 msg = MIMEMultipart()
-msg['From'] = 'sreeragpb0@gmail.com'
-msg['To'] = 'sreeragtb0@gmail.com'
+msg['From'] = 'youremail@mail.com'
+msg['To'] = 'destination@mail.com'
 msg['Subject'] = 'testing with python'
 
  
@@ -45,6 +45,6 @@ p.add_header('Content-Disposition', f'attachment; filename={filename}')
 text = msg.as_string()
 
 
-server.sendmail('sreeragpb0@gmail.com', 'sreeragtb0@gmail.com', text)
+server.sendmail('youremail@mail.com', 'destination@mail.com', text)
 
 
